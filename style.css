@@ -16,6 +16,7 @@ html {
 body {
     background: linear-gradient(0deg, #779fee 0%, #300141 100%);
     min-height: 100vh;
+    color: #ffffff;
 }
 
 .header {
@@ -23,7 +24,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 12% 30px;
+    padding: 30px 12%;
     background: #4d4187aa;
     display: flex;
     justify-content: space-between;
@@ -58,6 +59,46 @@ body {
 
 .header__menu {
     font-size: 100px;
-    color: #ffffff;
+    /* color: #ffffff; */
     display: none;
+}
+
+.home {
+    min-height: 100vh;
+    padding: 160px 12%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid white;
+}
+
+.home__title {
+    color: #4ad1f7;
+    font-size: 50px;
+    margin-bottom: 35px;
+    font-weight: 700;
+}
+
+.home__about {
+    font-size: 30px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.home__text {
+    font-size: 25px;
+    width: 60%;
+    line-height: 40px;
+    text-align: justify;
+    font-weight: 500;
+}
+
+
+
+
+
+
+.item-icon {
+    font-size: 50px;
 }
