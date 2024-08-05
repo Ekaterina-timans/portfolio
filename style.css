@@ -14,9 +14,22 @@ html {
 }
 
 body {
-    background: linear-gradient(0deg, #779fee 0%, #300141 100%);
+    background: linear-gradient(0deg, #6c96ea 0%, #300141 100%);
     min-height: 100vh;
     color: #ffffff;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #4ad1f7;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #4F468C;
+    width: 50px;
 }
 
 .header {
@@ -94,10 +107,98 @@ body {
     font-weight: 500;
 }
 
+.education {
+    padding: 100px 15px;
+}
 
+.education__title {
+    font-size: 50px;
+    text-align: center;
+    margin: 80px 0;
+}
 
+.education__timeline-items {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
 
+.education__timeline-items::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: #4ad1f7;
+    left: calc(50% - 1px);
+}
 
+.education__timeline-item {
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+}
+
+.education__timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.education__timeline-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+
+.education__timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+}
+
+.education__timeline-dot {
+    height: 21px;
+    width: 21px;
+    background-color: #4ad1f7;
+    box-shadow: 0 0 25px #4ad1f7,
+                0 0 50px #4ad1f7;
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top: 10px;
+}
+
+.education__timeline-date {
+    font-size: 20px;
+    font-weight: 800;
+    color: #ffffff;
+    margin: 6px 0 15px;
+}
+
+.education__timeline-content {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    border: 3px solid #4ad1f7;
+    padding: 30px 50px;
+    border-radius: 30px;
+    box-shadow: 0 0 10px #4ad1f7;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.education__timeline-content:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #4ad1f7;
+}
+
+.education__timeline-content h3 {
+    font-size: 20px;
+    margin: 0 0 10px;
+    font-weight: 500;
+}
+
+.education__timeline-content p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+}
 
 .item-icon {
     font-size: 50px;
