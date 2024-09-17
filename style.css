@@ -15,12 +15,13 @@
     --color-email: #058abf;
     --color-telegram: #0303fc;
     --color-github: #250132;
-    --color-socila: #666666;
+    --color-social: #666666;
     --color-skills: #4ad2f7ad;
     --color-skills-bg: rgba(0, 0, 0, 0.2);
     --color-window: rgba(0, 0, 0, 0.5);
     --color-modal: #adbddeef;
-
+    --color-shadow-img: rgba(54, 54, 54, 0.877);
+    --color-shadow-text: rgba(#212121, 0.3);
 }
 
 * {
@@ -508,7 +509,7 @@ body {
 
 .social-button span {
     width: 150px;
-    color: var(--color-socila);
+    color: var(--color-social);
     position: absolute;
     bottom: 0;
     left: -25px;
@@ -709,7 +710,6 @@ body {
 }
 
 .project__cards {
-    border: 1px solid black;
     width: 80%;
     height: 500px;
     display: flex;
@@ -900,7 +900,7 @@ body {
 }
 
 .project__modal-close {
-    font-size: 35px;
+    font-size: 45px;
     font-weight: bold;
     cursor: pointer;
 }
@@ -908,7 +908,6 @@ body {
 .project__modal-container {
     display: flex;
     height: 80vh;
-    border: 1px solid black;
     justify-content: center;
     align-items: end;
     box-sizing: border-box;
@@ -1028,6 +1027,10 @@ body {
     text-decoration: underline;
 }
 
+.modal__title:nth-child(odd) {
+    margin-top: 5px;
+}
+
 .project__modal-images.weather {
     width: 850px;
     height: 400px;
@@ -1066,7 +1069,6 @@ body {
 }
 
 .project__blocks {
-    border: 1px solid black;
     display: none;
     flex-direction: column;
     align-items: center;
@@ -1086,7 +1088,7 @@ body {
     height: 100%;
     width: 100%;
     border-radius: 20px;
-    box-shadow: 0px 8px 16px 0px rgba(54, 54, 54, 0.877);
+    box-shadow: 0px 8px 16px 0px var(--color-shadow-img);
 }
 
 .project__block:hover .project__description {
@@ -1129,7 +1131,7 @@ body {
 
 .project__info-btn:hover i {
     transform: scale(1.5);
-    text-shadow: 4px 0px 3px rgba(#212121, 0.3);
+    text-shadow: 4px 0px 3px var(--color-shadow-text);
     transition: all 0.2s linear 0.2s;
 }
 
