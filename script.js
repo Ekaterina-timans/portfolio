@@ -1,4 +1,5 @@
 const navLinks = document.querySelectorAll('.header__navbar a');
+const navLinksMin = document.querySelectorAll('.header__nav a');
 
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -6,6 +7,22 @@ navLinks.forEach(link => {
 
         link.classList.add('active');
     });
+});
+
+navLinksMin.forEach(link => {
+    link.addEventListener('click', () => {
+        navLinksMin.forEach(link => link.classList.remove('active'));
+
+        link.classList.add('active');
+    });
+});
+
+const menu = document.querySelector('.header__menu-min');
+
+menu.addEventListener('click', () =>  {
+    document.querySelector('.header__menu-bar').classList.toggle('change');
+    document.querySelector('.header__nav').classList.toggle('change');
+    document.querySelector('.header__menu-bg').classList.toggle('change-bg');
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -16,10 +33,7 @@ document.addEventListener('DOMContentLoaded', function () {
         new Swiper('.project__cards', {
             effect: "cards",
             cardsEffect: {
-                perSlideOffset: 15,
-                perSlideRotate: 3,
-                rotate: true,
-                slideShadows: true,
+                slideShadows: true
             },
             slidesPerView: 'auto',
             centeredSlides: true,
@@ -53,7 +67,6 @@ const cards = document.querySelectorAll('.project__card');
 const closeButtons = document.querySelectorAll('.project__modal-close');
 const overlay = document.querySelector('.window-background');
 
-// Функция для показа модального окна
 function showModal(modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
@@ -62,7 +75,6 @@ function showModal(modalId) {
     }
 }
 
-// Функция для закрытия модального окна
 function closeModal(modalId) {
     var modal = document.getElementById(modalId);
     if (modal) {
@@ -71,7 +83,6 @@ function closeModal(modalId) {
     }
 }
 
-// Обработчик нажатия на карточку
 cards.forEach(card => {
     card.addEventListener('click', function() {
         var modalId = this.getAttribute('data-modal');
@@ -79,7 +90,6 @@ cards.forEach(card => {
     });
 });
 
-// Обработчик нажатия на кнопку закрытия
 closeButtons.forEach(button => {
     button.addEventListener('click', function() {
         var modal = this.closest('.project__modal');

@@ -11,9 +11,23 @@
 <body>
 
     <header class="header">
-        <div class="header__logo">П<span class="fast-flicker">о</span>ртф<span class="flicker">о</span>лио</div>
-        <i class='bx bx-menu header__menu'></i>
-
+        <div class="header__logo">П<span class="fast-flicker">о</span>ртф<span class="flicker">о</span>лио</div> 
+        <div class="header__menu-min">
+            <div class="header__menu-bar">
+              <div id="bar1" class="header__bar bar1"></div>
+              <div id="bar2" class="header__bar bar2"></div>
+              <div id="bar3" class="header__bar bar3"></div>
+            </div>
+            <nav class="header__nav">
+              <ul>
+                <li><a href="#about" class="active">Обо мне</a></li>
+                <li><a href="#education">Образование</a></li>
+                <li><a href="#skills">Навыки</a></li>
+                <li><a href="#projects">Проекты</a></li>
+              </ul>
+            </nav> 
+        </div>
+        <div class="header__menu-bg"></div>
         <nav class="header__navbar">
             <a href="#about" class="active">Обо мне</a>
             <a href="#education">Образование</a>
@@ -113,10 +127,6 @@
                     <p class="skills__item-name">SASS</p>
                 </div>
                 <div class="skills__item">
-                    <img src="images/postcss.svg" alt="PostCSS" width="70" height="70">
-                    <p class="skills__item-name">PostCSS</p>
-                </div>
-                <div class="skills__item">
                     <i class='bx bxl-javascript skills__item-icon' style="color:#F5D501"></i>
                     <p class="skills__item-name">JavaScript</p>
                 </div>
@@ -208,24 +218,15 @@
         <div class="swiper project__cards">
             <div class="swiper-wrapper project__slider">
                 <div class="swiper-slide project__card" data-modal="modal_1">
-                    <img class="project__img" src="images/MDclinic.png" alt="image-MDclinic" width="700" height="400">
+                    <img class="project__img" src="images/Vesta.jpg" alt="Изображение верстки Vesta" width="700" height="400">
                     <div class="project__description">
-                        <p class="project__name">Верстка макета MDclinic</p>
+                        <p class="project__name">Верстка макета Vesta</p>
                         <i class="project__show bx bxs-show"></i>
                         <p>(Нажмите на карточку, чтобы просмотреть детально проект)</p>
                     </div>
                 </div>
                 <div class="swiper-slide project__card" data-modal="modal_2">
-                    <img class="project__img" src="images/Weather.png" alt="image-Weather" width="700" height="400">
-                    <div class="project__description">
-                        <p class="project__name">Веб-приложение погода</p>
-                        <p class="project__explanation">(на английском) использовано сторонне API</p>
-                        <i class="project__show bx bxs-show"></i>
-                        <p>(Нажмите на карточку, чтобы просмотреть детально проект)</p>
-                    </div>
-                </div>
-                <div class="swiper-slide project__card" data-modal="modal_3">
-                    <img class="project__img" src="images/Recipes.png" alt="image-MDclinic" width="700" height="400">
+                    <img class="project__img" src="images/Recipes.png" alt="Изображение приложения Recipes" width="700" height="400">
                     <div class="project__description">
                         <p class="project__name">Веб-приложение рецепты</p>
                         <p class="project__explanation">(на английском) использовано сторонне API</p>
@@ -233,8 +234,8 @@
                         <p>(Нажмите на карточку, чтобы просмотреть детально проект)</p>
                     </div>
                 </div>
-                <div class="swiper-slide project__card" data-modal="modal_4">
-                    <img class="project__img" src="images/Statistics.png" alt="image-Weather" width="700" height="400">
+                <div class="swiper-slide project__card" data-modal="modal_3">
+                    <img class="project__img" src="images/Statistics.png" alt="Изображение приложения планировщик задач" width="700" height="400">
                     <div class="project__description">
                         <p class="project__name">Веб-приложение планировщик задач</p>
                         <i class="project__show bx bxs-show"></i>
@@ -256,37 +257,82 @@
                 <div class="swiper-pagination"></div>
             </div>
         </div>
+
+        <div class="project__blocks">
+            <div class="project__block">
+                <img src="images/Vesta-mini.jpg" alt="Изображение страницы Заявки">
+                <div class="project__description">
+                    <p class="project__name">Верстка макета Vesta</p>
+                    <div class="project__info">
+                        <a href="" class="project__info-btn"><i class="modal__icon bx bxl-internet-explorer"></i></a>
+                        <a href="https://github.com/Ekaterina-timans/vesta" class="project__info-btn"><i class="modal__icon bx bxl-github"></i></a>
+                        <a href="https://www.figma.com/design/w6Peh4FeKb0GKPO3bsuvME/Untitled-(Copy)-(Copy)-(Copy)-(Community)?node-id=5-70&t=TqRfVf4fY9fJHAdF-1" class="project__info-btn"><i class="modal__icon bx bxl-figma"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project__block">
+                <img src="images/Recipes-home.png" alt="Изображение страницы Home">
+                <div class="project__description">
+                    <p class="project__name">Веб-приложение рецепты</p>
+                    <div class="project__info">
+                        <a href="https://recipes-app-ruddy.vercel.app/" class="project__info-btn"><i class="modal__icon bx bxl-internet-explorer"></i></a>
+                        <a href="https://github.com/Ekaterina-timans/recipes_app" class="project__info-btn"><i class="modal__icon bx bxl-github"></i></a>
+                        <a href="https://www.figma.com/design/txsv3h3dLmGEfuY4DuHZjo/Web-recipe-book-(Community)?node-id=1-2&t=NJpnAbQXAtstqtAO-1" class="project__info-btn"><i class="modal__icon bx bxl-figma"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="project__block">
+                <img src="images/Recipes-home.png" alt="">
+                <div class="project__description">
+                    <p class="project__name">Веб-приложение планировщик задач</p>
+                    <div class="project__info">
+                        <a href="https://github.com/Ekaterina-timans/web_task_scheduler-frontend" class="project__info-btn"><i class="modal__icon bx bxl-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <div class="window-background"></div>
+
     <div id="modal_1" class="project__modal">
         <div class="project__modal-header">
-            <h1 class="project__modal-title">Верстка макета MDclinic</h1>
+            <h1 class="project__modal-title">Верстка макета Vesta</h1>
             <span class="project__modal-close">&times;</span>
         </div>
-        <div class="project__modal-images">
-            <img src="images/MDclinic.png" alt="" width="700" height="400">
-        </div>
-        <div class="project__modal-content">
-            <div class="modal__links">
-                <div class="modal__link">
-                    <i class="modal__icon bx bxl-internet-explorer"></i><p>Веб-сайт:</p><a href="" target=»_blank»>Ссылка на сайт</a>
+        <div class="project__modal-container">
+            <div class="project__modal-images images vesta swiper">
+                <div class="swiper-wrapper">
+                    <img class="swiper-slide" src="images/Vesta-mini.jpg" alt="Изображение страницы Заявки">
+                    <img class="swiper-slide" src="images/Gallery.jpg" alt="Изображение страницы Галереи">
+                    <img class="swiper-slide" src="images/Catalog.jpg" alt="Изображение страницы Каталога">
+                    <img class="swiper-slide" src="images/Reviews.jpg" alt="Изображение страницы Отзывов">
                 </div>
-                <div class="modal__link">
-                    <i class="modal__icon bx bxl-github"></i><p>GitHub:</p><a href="https://github.com/Ekaterina-timans/md_clinic" target=»_blank»>Ссылка на проект в GitHub</a>
-                </div>
-                <div class="modal__link">
-                    <i class="modal__icon bx bxl-figma"></i><p>Макет:</p><a href="" target=»_blank»>Ссылка на макет</a>
+                <div class="slider-control">
+                    <div class="swiper-button-prev arrow-left"></div>
+                    <div class="swiper-button-next arrow-right"></div>
                 </div>
             </div>
-            <div class="modal__details">
+            <div class="project__modal-content vesta">
+                <div class="modal__links">
+                    <div class="modal__link">
+                        <i class="modal__icon bx bxl-internet-explorer"></i><p>Веб-сайт:</p><a href="" target=»_blank»>Ссылка на сайт</a>
+                    </div>
+                    <div class="modal__link">
+                        <i class="modal__icon bx bxl-github"></i><p>GitHub:</p><a href="https://github.com/Ekaterina-timans/vesta" target=»_blank»>Ссылка на проект в GitHub</a>
+                    </div>
+                    <div class="modal__link">
+                        <i class="modal__icon bx bxl-figma"></i><p>Макет:</p><a href="https://www.figma.com/design/w6Peh4FeKb0GKPO3bsuvME/Untitled-(Copy)-(Copy)-(Copy)-(Community)?node-id=5-70&t=TqRfVf4fY9fJHAdF-1" target=»_blank»>Ссылка на макет</a>
+                    </div>
+                </div>
                 <div>
                     <h2>Описание:</h2>
                     <p class="modal__description">Дизайн веб-страницы, созданный на основе макета в Figma. Адаптивная верстка сайта для различных устройств и экранов.</p>
                     <h2 class="modal__tools-title">Технологии и инструменты:</h2>
                     <ul>
-                        <li>PostCSS</li>
+                        <li>LESS</li>
                         <li>JavaScript</li>
+                        <li>Gulp</li>
                     </ul>
                 </div>
             </div>
@@ -295,65 +341,15 @@
 
     <div id="modal_2" class="project__modal">
         <div class="project__modal-header">
-            <h1 class="project__modal-title">Веб-приложение погода</h1>
-            <span class="project__modal-close">&times;</span>
-        </div>
-        <div class="project__modal-images images weather swiper">
-            <div class="swiper-wrapper">
-                <img class="swiper-slide" src="images/Weather-light.png" alt="" width="850" height="400">
-                <img class="swiper-slide" src="images/Weather.png" alt="" width="850" height="400">
-            </div>
-            <div class="slider-control">
-                <div class="swiper-button-prev arrow-left"></div>
-                <div class="swiper-button-next arrow-right"></div>
-            </div>
-        </div>
-        <div class="project__modal-content">
-            <div class="modal__links">
-                <div class="modal__link">
-                    <i class="modal__icon bx bxl-internet-explorer"></i><p>Веб-сайт:</p><a href="" target=»_blank»>Ссылка на сайт</a>
-                </div>
-                <div class="modal__link">
-                    <i class="modal__icon bx bxl-github"></i><p>GitHub:</p><a href="https://github.com/Ekaterina-timans/weather_app" target=»_blank»>Ссылка на проект в GitHub</a>
-                </div>
-            </div>
-            <div class="modal__details">
-                <div>
-                    <h2>Описание:</h2>
-                    <p class="modal__description">Веб-приложение погода, которое позволяет посмотреть текущую погоду и прогноз погоды на 5 дней вперед.</p>
-                    <ul>
-                        <li><span>Геолокация:</span> Автоматическое определение местоположения пользователя для отображения текущей погоды в этом регионе.</li>
-                        <li><span>Поиск по городу:</span> Возможность ввода имени города для получения информации о текущей погоде в указанном месте.</li>
-                        <li><span>Прогноз на 5 дней:</span> Отображение прогноза погоды на следующие пять дней, которая включает температуру.</li>
-                        <li><span>Предпочтения по отображению:</span> Настройка предпочтений для отображения погодных данных, таких как единицы измерения (Цельсий/Фаренгейт).</li>
-                        <li><span>Темы:</span> Возможность смены темы оформления приложения для улучшения визуального восприятия и удобства использования.</li>
-                        <li><span>Адаптивность:</span> Оптимизация пользовательского интерфейса для различных устройств и экранов.</li>
-                        <li><span>Интеграция с внешним API:</span> Использование внешнего сервиса OpenWeatherMap для получения данных о погоде.</li>
-                    </ul>
-                </div>
-                <div>
-                    <h2 class="modal__tools-title">Технологии и инструменты:</h2>
-                    <ul>
-                        <li>JavaScript</li>
-                        <li>LESS</li>
-                        <li>Webpack</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div id="modal_3" class="project__modal">
-        <div class="project__modal-header">
             <h1 class="project__modal-title">Веб-приложение рецепты</h1>
             <span class="project__modal-close">&times;</span>
         </div>
         <div class="project__modal-container">
             <div class="project__modal-images images recipes swiper">
                 <div class="swiper-wrapper">
-                    <img class="swiper-slide" src="images/Recipes-home.png" alt="" width="600" height="700">
-                    <img class="swiper-slide" src="images/Recipes-recipe.png" alt="" width="600" height="700">
-                    <img class="swiper-slide" src="images/Recipes-favorites.png" alt="" width="600" height="700">
+                    <img class="swiper-slide" src="images/Recipes-home.png" alt="Изображение страницы Home">
+                    <img class="swiper-slide" src="images/Recipes-recipe.png" alt="Изображение страницы Recipe">
+                    <img class="swiper-slide" src="images/Recipes-favorites.png" alt="Изображение страницы Favorites">
                 </div>
                 <div class="slider-control">
                     <div class="swiper-button-prev arrow-left"></div>
@@ -363,10 +359,10 @@
             <div class="project__modal-content recipes">
                 <div class="modal__links">
                     <div class="modal__link">
-                        <i class="modal__icon bx bxl-internet-explorer"></i><p>Веб-сайт:</p><a href="" target=»_blank»>Ссылка на сайт</a>
+                        <i class="modal__icon bx bxl-internet-explorer"></i><p>Веб-сайт:</p><a href="https://recipes-app-ruddy.vercel.app/" target=»_blank»>Ссылка на сайт</a>
                     </div>
                     <div class="modal__link">
-                        <i class="modal__icon bx bxl-github"></i><p>GitHub:</p><a href="" target=»_blank»>Ссылка на проект в GitHub</a>
+                        <i class="modal__icon bx bxl-github"></i><p>GitHub:</p><a href="https://github.com/Ekaterina-timans/recipes_app" target=»_blank»>Ссылка на проект в GitHub</a>
                     </div>
                     <div class="modal__link">
                         <i class="modal__icon bx bxl-figma"></i><p>Макет:</p><a href="https://www.figma.com/design/txsv3h3dLmGEfuY4DuHZjo/Web-recipe-book-(Community)?node-id=1-2&t=NJpnAbQXAtstqtAO-1" target=»_blank»>Ссылка на макет</a>
@@ -375,7 +371,7 @@
                 <div>
                     <h2>Описание:</h2>
                     <p class="modal__description">Приложение для поиска и управления рецептами, которое предоставляет пользователям возможность находить рецепты, просматривать их детали, сохранять в избранное и использовать различные фильтры для поиска подходящих рецептов.</p>
-                    <ul>
+                    <ul class="modal__function">
                         <li><span>Функция поиска:</span> Позволяет пользователям искать рецепты по ключевым словам, ингредиентам или другим критериям.</li>
                         <li><span>Фильтрация:</span> Возможность применения фильтров по категориям, типам кухни, калориям, времени приготовления, типам блюд и непереносимости продуктов.</li>
                         <li><span>Детали рецепта:</span> Информация о рецепте, включая ингредиенты, калории, жиры, белки и углеводы, а также инструкция, которая включает в себя подробные шаги по приготовлению рецепта.</li>
@@ -390,71 +386,73 @@
                         <li>jQuery</li>
                         <li>CSS</li>
                         <li>Bootstrap</li>
-                        <li>Gulp</li>
+                        <li>Webpack</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="modal_4" class="project__modal">
+    <div id="modal_3" class="project__modal">
         <div class="project__modal-header">
             <h1 class="project__modal-title">Веб-приложение планировщик задач</h1>
             <span class="project__modal-close">&times;</span>
         </div>
-        <div class="project__modal-images images tasks swiper">
-            <div class="swiper-wrapper">
-                <img class="swiper-slide" src="images/Statistics.png" alt="" width="900" height="450">
-                <img class="swiper-slide" src="images/Tasks.png" alt="" width="900" height="450">
-                <img class="swiper-slide" src="images/Settings.png" alt="" width="900" height="450">
-                <img class="swiper-slide" src="images/Users.png" alt="" width="900" height="450">
-                <img class="swiper-slide" src="images/Banned.png" alt="" width="900" height="450">
-            </div>
-            <div class="slider-control">
-                <div class="swiper-button-prev arrow-left"></div>
-                <div class="swiper-button-next arrow-right"></div>
-            </div>
-        </div>
-        <div class="project__modal-content">
-            <div class="modal__links">
-                <div class="modal__link">
-                    <i class="modal__icon bx bxl-github"></i><p>GitHub:</p><a href="https://github.com/Ekaterina-timans/web_task_scheduler-frontend" target=»_blank»>Ссылка на проект в GitHub</a>
+        <div class="project__modal-block">
+            <div class="project__modal-images images tasks swiper">
+                <div class="swiper-wrapper">
+                    <img class="swiper-slide" src="images/Statistics.png" alt="Изображение страницы Statistics" width="900" height="450">
+                    <img class="swiper-slide" src="images/Tasks.png" alt="Изображение страницы Tasks" width="900" height="450">
+                    <img class="swiper-slide" src="images/Settings.png" alt="Изображение страницы Settings" width="900" height="450">
+                    <img class="swiper-slide" src="images/Users.png" alt="Изображение страницы Users" width="900" height="450">
+                    <img class="swiper-slide" src="images/Banned.png" alt="Изображение страницы Banned users" width="900" height="450">
+                </div>
+                <div class="slider-control">
+                    <div class="swiper-button-prev arrow-left"></div>
+                    <div class="swiper-button-next arrow-right"></div>
                 </div>
             </div>
-            <div class="modal__details">
-                <div>
-                    <h2>Описание:</h2>
-                    <p class="modal__description">Веб-планировщик задач, который позволяет пользователю системы вести списки своих задач.</p>
-                    <ul>
-                        <li><span>Организация задач:</span> Создание, редактирование и удаление задач, а также установление их приоритетов и даты окончания.</li>
-                        <li><span>Планирование:</span> Возможность просмотра задач на различные временные промежутки — день, неделю, месяц, год.</li>
-                        <li><span>Управление файлами:</span> Возможность прикрепления файлов к задачам.</li>
-                        <li><span>Поиск:</span> Поиск задач по ключевым словам.</li>
-                        <li><span>Управление пользователями:</span> Регистрация и авторизация пользователей, а также возможность администрирования их аккаунтов.</li>
-                    </ul>
-                    <h2 class="modal__tools-title">Технологии и инструменты:</h2>
-                    <p class="modal__title">БД и язык программирования:</p>
-                    <ul class="modal__tools">
-                        <li>PHP</li>
-                        <li>MySQL</li>
-                    </ul>
+            <div class="project__modal-content">
+                <div class="modal__links">
+                    <div class="modal__link">
+                        <i class="modal__icon bx bxl-github"></i><p>GitHub:</p><a href="https://github.com/Ekaterina-timans/web_task_scheduler-frontend" target=»_blank»>Ссылка на проект в GitHub</a>
+                    </div>
                 </div>
-                <div>
-                    <p class="modal__title">Фронтенд-технологии:</p>
-                    <ul>
-                        <li>React JS</li>
-                        <li>React Hook Form</li>
-                        <li>React Router DOM</li>
-                        <li>React Day Picker</li>
-                    </ul>
-                    <p class="modal__title">Дополнительные инструменты:</p>
-                    <ul>
-                        <li>Vite</li>
-                        <li>Firebase/php-jwt</li>
-                        <li>Tanstack query react</li>
-                        <li>Axios</li>
-                        <li>JS-Cookie</li>
-                    </ul>
+                <div class="modal__details">
+                    <div>
+                        <h2>Описание:</h2>
+                        <p class="modal__description">Веб-планировщик задач, который позволяет пользователю системы вести списки своих задач.</p>
+                        <ul class="modal__function">
+                            <li><span>Организация задач:</span> Создание, редактирование и удаление задач, а также установление их приоритетов и даты окончания.</li>
+                            <li><span>Планирование:</span> Возможность просмотра задач на различные временные промежутки — день, неделю, месяц, год.</li>
+                            <li><span>Управление файлами:</span> Возможность прикрепления файлов к задачам.</li>
+                            <li><span>Поиск:</span> Поиск задач по ключевым словам.</li>
+                            <li><span>Управление пользователями:</span> Регистрация и авторизация пользователей, а также возможность администрирования их аккаунтов.</li>
+                        </ul>
+                        <h2 class="modal__tools-title">Технологии и инструменты:</h2>
+                        <p class="modal__title">БД и язык программирования:</p>
+                        <ul class="modal__tools">
+                            <li>PHP</li>
+                            <li>MySQL</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="modal__title">Фронтенд-технологии:</p>
+                        <ul>
+                            <li>React JS</li>
+                            <li>React Hook Form</li>
+                            <li>React Router DOM</li>
+                            <li>React Day Picker</li>
+                        </ul>
+                        <p class="modal__title">Дополнительные инструменты:</p>
+                        <ul>
+                            <li>Vite</li>
+                            <li>Firebase/php-jwt</li>
+                            <li>Tanstack query react</li>
+                            <li>Axios</li>
+                            <li>JS-Cookie</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
