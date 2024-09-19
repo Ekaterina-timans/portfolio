@@ -1,5 +1,6 @@
 const navLinks = document.querySelectorAll('.header__navbar a');
 const navLinksMin = document.querySelectorAll('.header__nav a');
+const sections = document.querySelectorAll('section');
 
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
@@ -17,8 +18,26 @@ navLinksMin.forEach(link => {
     });
 });
 
-const menu = document.querySelector('.header__menu-min');
+function changeActiveLink() {
+    let scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
 
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+            navLinks.forEach(link => link.classList.remove('active'));
+            const activeLink = document.querySelector('.header__navbar a[href="#' + section.id + '"]');
+            console.log(activeLink)
+            if (activeLink) {
+                activeLink.classList.add('active');
+            }
+        }
+    });
+}
+window.addEventListener('scroll', changeActiveLink);
+
+const menu = document.querySelector('.header__menu-min');
 menu.addEventListener('click', () =>  {
     document.querySelector('.header__menu-bar').classList.toggle('change');
     document.querySelector('.header__nav').classList.toggle('change');
