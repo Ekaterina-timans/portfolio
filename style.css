@@ -845,6 +845,7 @@ body {
     background: var(--color-skills-bg);
     backdrop-filter: blur(15px);
     border-radius: 20px;
+    z-index: 1;
 }
 
 .project__name {
