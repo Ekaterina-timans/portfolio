@@ -695,6 +695,7 @@ body {
     font-size: 25px;
     color: var(--color-dark);
     font-weight: 600;
+    text-align: center;
 }
 
 .skills__item-icon {
